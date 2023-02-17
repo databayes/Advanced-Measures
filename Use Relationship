@@ -1,0 +1,9 @@
+----------------------------------------
+-- Measure: [£ Total Sales by Ship Date]
+----------------------------------------
+MEASURE 'Advanced Examples'[£ Total Sales by Ship Date] = CALCULATE([£ Total Sales], USERELATIONSHIP('Date'[Date], Sales[Ship Date]))
+
+-----------------------------------------------
+-- Measure: [£ Total Export Sales by Ship Date]
+-----------------------------------------------
+MEASURE 'Advanced Examples'[£ Total Export Sales by Ship Date] = CALCULATE([£ Total Sales by Ship Date], Sales[Channel] = "Export")
